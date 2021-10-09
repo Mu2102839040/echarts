@@ -14,6 +14,7 @@ export default {
         }
     },
     mounted () {
+      console.log(this.$address,'1111');
 var ROOT_PATH =
   'https://cdn.jsdelivr.net/gh/apache/echarts-website@asf-site/examples';
 
@@ -21,7 +22,7 @@ var chartDom = document.getElementById('main');
 var myChart = echarts.init(chartDom);
 var option;
 
-$.getJSON(ROOT_PATH + '/data-gl/asset/data/flights.json', function (data) {
+function AA(data) {
   var airports = data.airports.map(function (item) {
     return {
       coord: [item[3], item[4]]
@@ -150,8 +151,8 @@ $.getJSON(ROOT_PATH + '/data-gl/asset/data/flights.json', function (data) {
       });
     });
   });
-});
-
+};
+AA(this.$address);
 option && myChart.setOption(option);
 
 

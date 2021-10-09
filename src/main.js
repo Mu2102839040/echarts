@@ -5,8 +5,9 @@ import App from './App'
 import router from './router'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
-
+import address from '../address.json' 
 Vue.use(ElementUI);
+Vue.prototype.$address = address;
 Vue.config.productionTip = false
 new Vue({
   el: '#app',
